@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
+    z-index: 5;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    padding: 10px;
+    transition: 0.2s;
+}
+nav ul li:hover{
+    transition: 0.2s;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.nav-iconbar{
+    display: flex;
+    justify-content: space-around;
+    width: 5%;
+}
+.nav-icon{
+    display: flex;
+    width: 25px;
+    transition: 0.2s;
+}
+.nav-icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.nav-iconbar button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.search{
+    display: none;
+}
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.home a{
+    text-decoration: none;
+}
+.home-bg{
+    position: absolute;
+    width: 1325px;
+    height: 655px;
+}
+.images-bg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.images-bg img{
+    width: 100%;
+    height: 100%;
+}
+.home-content{
+    position: absolute;
+    height: 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    left: 10%;
+    z-index: 6;
+}
+.men-col{
+    font-size: 24px;
+}
+.home-bold{
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+    font-weight: 500;
+}
+.button-wallpaper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 32px;
+    z-index: 3;
+}
+.left-slide,
+.right-slide{
+    cursor: pointer;
+    z-index: 10;
+}
+.shop-button{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    transition: 0.2s;
+}
+.shop-button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+.shop{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 1%;
+}
+.belanja{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 12%;
+    padding-left: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.kr{
+    background-image: url(./assets/belanja/Kiri.png);
+}
+.tg{
+    background-image: url(./assets/belanja/Tengah.png);
+}
+.kn{
+    background-image: url(./assets/belanja/Kanan.png);
+}
+.belanja a{
+    text-decoration: none;
+}
+.tombol-shop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    padding: 5px 15px;
+    transition: 0.2s;
+}
+.tombol-shop:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+.title-shop{
+    padding: 5px 15px;
+    font-size: 24px;
+}
+.garis-shop{
+    background-color: #464545;
+    height: 2px;
+    width: 40px;
+    margin-right: 5px;
+}
+.text-shop{
+    color: #464545;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 130vh;
+    width: 100%;
+}
+.products-title{
+    font-size: 32px;
+    font-weight: 700;
+}
+.products-list, .products-list ul{
+    display: flex;
+    justify-content: space-around;
+}
+.products-list{
+    width: 40%;
+}
+.products-list-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    justify-content: space-around;
+}
+.products-list ul{
+    width: 100%;
+}
+.products-list ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.products-list, .products-title{
+    display: flex;
+    justify-content: center;
+}
+.products-list ul li{
+    list-style: none;
+}
+.product-load{
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    padding: 10px 25px;
+}
+.product-load:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+.icon-heart{
+    width: 20px;
+    transition: 0.2s;
+}
+.icon-heart:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.barang{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.barang a{
+    text-decoration: none;
+    color: black;
+}
+.content-barang{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 10px;
+    transition: 0.2s;
+}
+.content-barang:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.define-barang{
+    display: flex;
+    justify-content: space-between;
+}
+.gambar-barang img{
+    width: 100%;
+}
+
+.garis{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.garis img{
+    width: 200px;
+}
+.garis-isi{
+    padding: 15px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+}
+.garis a{
+    text-decoration: none;
+    position: absolute;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+.top-footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+    align-items: center;
+}
+.top-footer-left{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.top-footer-center,
+.top-footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+}
+.top-footer-center ul,
+.top-footer-right ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+.footer a{
+    text-decoration: none;
+    color: #818181;
+}
+.footer-title{
+    font-weight: 700;
+}
+.footer-title-left{
+    font-size: 24px;
+    font-weight: 700;
+}
+.footer-call-us{
+    font-size: 32px;
+}
+.bottom-footer{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-icon-list{
+    display: flex;
+    justify-content: space-around;
+    width: 13%;
+}
+.footer-icon{
+    width: 25px;
+}
+.footer-icon:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:500px){
+    nav{
+        font-size: 12px;
+    }
+    nav button{
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .nav-icon{
+        width: 20px;
+    }
+    
+    .home{
+        height: 50vh;
+    }
+    .home-content{
+        height: 25%;
+        padding-top: 15px;
+        left: 15%;
+    }
+    .button-wallpaper{
+        height: 70%;
+    }
+    .men-col{
+        font-size: 12px;
+    }
+    .home-bold{
+        font-size: 24px;
+    }
+    .shop-button{
+        width: 100px;
+        font-size: 12px;
+    }
+    .home-bg{
+        top: 10%;
+        height: 40%;
+        width: 90%;
+    }
+    .home .images-bg{
+        width: 450px;
+        height: 250px;
+    }
+    
+    .garis{
+        height: 10vh;
+    }
+    .garis img{
+        width: 60px;
+    }
+    .garis-isi{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .shop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+    }
+    .belanja{
+        width: 400px;
+        height: 30%;
+    }
+    
+    .products{
+        height: 180vh;
+    }
+    .products-list-content{
+        height: 80%;
+    }
+    .barang{
+        height: 90%;
+    }
+    .content-barang{
+        width: 30%;
+    }
+    .icon-heart{
+        width: 25px;
+        height: 25px;
+    }
+    .products-list{
+        width: 80%;
+    }
+
+    .footer{
+        height: 60vh;
+    }
+    .top-footer{
+        height: 80%;
+    }
+    .footer-call-us{
+        font-size: 12px;
+    }
+    .textabu{
+        font-size: 12px;
+    }
+    .top-footer-left,
+    .top-footer-center,
+    .top-footer-right{
+        height: 70%;
+    }
+    .footer-icon-list{
+        width: 40%;
+    }
+}
